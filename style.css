@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  width: 400px;
+  background-color: rgba(0,211,211);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+.btn {
+  width: 70px;
+  height: 40px;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="container">
+      <div class="main">
+      <input type="text" id="result" readonly>
+      <table>
+        <tr>
+          <td><input type="button" value="C" class="btn" onclick="clearResult()"></td>
+          <td><input type="button" value="%" class="btn" onclick="appendToResult('%')"></td>
+          <td><input type="button" value="V" class="btn" onclick="appendToResult('V')"></td>
+          <td><input type="button" value="/" class="btn" onclick="appendToResult('/')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="7" class="btn" onclick="appendToResult('7')"></td>
+          <td><input type="button" value="8" class="btn" onclick="appendToResult('8')"></td>
+          <td><input type="button" value="9" class="btn" onclick="appendToResult('9')"></td>
+          <td><input type="button" value="*" class="btn" onclick="appendToResult('*')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" class="btn" onclick="appendToResult('4')"></td>
+          <td><input type="button" value="5" class="btn" onclick="appendToResult('5')"></td>
+          <td><input type="button" value="6" class="btn" onclick="appendToResult('6')"></td>
+          <td><input type="button" value="-" class="btn" onclick="appendToResult('-')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" class="btn" onclick="appendToResult('1')"></td>
+          <td><input type="button" value="2" class="btn" onclick="appendToResult('2')"></td>
+          <td><input type="button" value="3" class="btn" onclick="appendToResult('3')"></td>
+          <td><input type="button" value="+" class="btn" onclick="appendToResult('+')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="0" class="btn" onclick="appendToResult('0')"></td>
+          <td><input type="button" value="." class="btn" onclick="appendToResult('.')"></td>
+          <td><input type="button" value="=" class="btn" onclick="calculate()"></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  
+    <script>
+      function appendToResult(value) {
+        document.getElementById("result").value += value;
+      }
+  
+      function calculate() {
+        let result = document.getElementById("result").value;
+        let answer = eval(result);
+        document.getElementById("result").value = answer;
+      }
+  
+      function clearResult() {
+        document.getElementById("result").value = '';
+      }
+    </script>
+  </body>
+  </html>
